@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SignInUP</title>
+    <link rel="stylesheet" href="//cdn.bootcss.com/mdui/0.4.1/css/mdui.min.css">
+    <script src="//cdn.bootcss.com/mdui/0.4.1/js/mdui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                return {
+                    account: {
+                        userName: "",
+                        userPassword: ""
+                    }
+                }
+            },
+            methods: {
+                submit() {
+
+                    var formData = JSON.stringify(this.acount);
+                    this.$http.post(url, formData).then(function (data) {
+                        if (data.json().state == "success")
+                            console.log("success");
+                    }
+                }).catch(function () {
+            console.log("服务器异常！");
+        });
+
+        }
+        }
+        })
+
+    </script>
+</head>
+
+
+<body class="mdui-theme-primary-grey-800 mdui-theme-accent-deep-orange">
+
+<div class="mdui-container">
+    <div id="app">
+        <form @submit.prevent="submit">
+            <div class="mdui-row">
+                <div class="mdui-col-xs-12 mdui-col-md-4 mdui-col-offset-md-4">
+                    <div class="mdui-textfield mdui-textfield-floating-label">
+                        <i class="mdui-icon material-icons">account_circle</i>
+                        <label class="mdui-textfield-label">User Name</label>
+                        <input class="mdui-textfield-input" type="text" v-model="user.name"/>
+                    </div>
+                    <div class="mdui-textfield mdui-textfield-floating-label">
+                        <i class="mdui-icon material-icons">lock</i>
+                        <label class="mdui-textfield-label">User Password</label>
+                        <input class="mdui-textfield-input" type="text" v-model="user.password"/>
+                    </div>
+                    <br>
+                    <input class="mdui-center mdui-btn mdui-btn-raised mdui-ripple" type="submit" value="Submit">
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>
