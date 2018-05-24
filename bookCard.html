@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bookCard</title>
+    <link rel="stylesheet" href="//cdn.bootcss.com/mdui/0.4.1/css/mdui.min.css">
+    <script src="//cdn.bootcss.com/mdui/0.4.1/js/mdui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body class="mdui-theme-primary-grey-800 mdui-theme-accent-deep-orange">
+<div class="mdui-container">
+    <div class="mdui-card mdui-col-xs-12 mdui-col-md-4" style="padding-left: 0px; padding-right: 0px; margin-top: 10px; margin-bottom: 10px">
+        <div class="mdui-card-primary">
+            <div class="mdui-card-primary-title">Barron AP PhysicsC Mechanics</div>
+            <div class="mdui-card-primary-subtitle">Seller: Johanna Sun<br>Price: 999</div>
+        </div>
+        <div class="mdui-panel" mdui-panel>
+            <div class="mdui-panel-item" style="margin-bottom: 0px">
+                <div class="mdui-panel-item-header">
+                    <div class="mdui-panel-item-title">Details</div>
+                    <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                </div>
+                <div class="mdui-panel-item-body">
+                    <img class="mdui-img-fluid" src="img.png"/>
+                    <br>
+                    <img class="mdui-img-fluid" src="img.png"/>
+                    <p> This is some info</p>
+                    <p> This is another info</p>
+                    <p> This is another another info</p>
+                    <div class="mdui-dialog" id="sellerInfo">
+                        <img class="mdui-img-fluid" src="img.png"/>
+                    </div>
+                    <div class="mdui-panel-item-actions">
+                        <button class="mdui-btn mdui-ripple mdui-color-theme-a400" mdui-dialog="{target: '#sellerInfo'}">Buy</button>
+                        <button class="mdui-btn mdui-ripple mdui-color-theme-a400">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
