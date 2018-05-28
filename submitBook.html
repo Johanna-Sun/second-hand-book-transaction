@@ -6,6 +6,34 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/mdui/0.4.1/css/mdui.min.css">
     <script src="//cdn.bootcss.com/mdui/0.4.1/js/mdui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                return {
+                    account: {
+                        userName: "",
+                        userPassword: ""
+                    }
+                }
+            },
+            methods: {
+                submit() {
+
+                    var formData = JSON.stringify(this.acount);
+                    this.$http.post(url, formData).then(function (data) {
+                        if (data.json().state == "success")
+                            console.log("success");
+                    }
+                }).catch(function () {
+            console.log("服务器异常！");
+        });
+
+        }
+        }
+        })
+
+    </script>
 </head>
 <body class="mdui-theme-primary-grey-800 mdui-theme-accent-deep-orange">
 <div class="mdui-container">
