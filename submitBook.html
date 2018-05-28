@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>submitBook</title>
+    <link rel="stylesheet" href="//cdn.bootcss.com/mdui/0.4.1/css/mdui.min.css">
+    <script src="//cdn.bootcss.com/mdui/0.4.1/js/mdui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body class="mdui-theme-primary-grey-800 mdui-theme-accent-deep-orange">
+<div class="mdui-container">
+    <div id="app">
+        <form @submit.prevent="submit">
+            <div class="mdui-row">
+                <div class="mdui-col-xs-12 mdui-col-md-4 mdui-col-offset-md-4">
+                    <div class="mdui-textfield mdui-textfield-floating-label">
+                        <label class="mdui-textfield-label">Title</label>
+                        <input class="mdui-textfield-input" type="text" v-model="book.title"/>
+                    </div>
+                    <div class="mdui-textfield mdui-textfield-floating-label">
+                        <label class="mdui-textfield-label">Description</label>
+                        <textarea class="mdui-textfield-input" v-model="book.description"></textarea>
+                    </div>
+                    <div class="mdui-textfield mdui-textfield-floating-label">
+                        <label class="mdui-textfield-label">Price</label>
+                        <input class="mdui-textfield-input" type="text" v-model="book.price"/>
+                    </div>
+                    <div class="mdui-textfield mdui-textfield-floating-label">
+                        <label class="mdui-textfield-label">Tag</label>
+                        <input class="mdui-textfield-input" type="text" v-model="book.tage"/>
+                    </div>
+                    <br>
+                    <input class="mdui-center mdui-btn mdui-btn-raised mdui-ripple" type="submit" value="Submit">
+                </div>
+            </div>
+        </form>
+    </div>
+    <br><br>
+</div>
+
+</body>
+</html>
